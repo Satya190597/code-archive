@@ -1,0 +1,16 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<button>Click Me</button>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.3/rxjs.umd.min.js"></script>
+		<script>
+			var button = document.querySelector('button');
+			const {Rx,Observable,fromEvent} = rxjs
+			fromEvent(button,'click')
+			.subscribe((event) => {
+				console.log(event);
+			})
+		</script>	
+	</body>
+</html>

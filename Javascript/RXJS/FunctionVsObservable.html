@@ -1,0 +1,44 @@
+<html>
+	<head>
+	</head>
+	<body>
+        <p><strong>What is the difference between an Observable and a function?</strong></p>
+        <p>Observables can "return" multiple values over time, something which functions cannot.</p>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.5.3/rxjs.umd.min.js"></script>
+		<script>
+			const {Observable} = rxjs
+
+            /*
+                Working with a normal function
+            */
+            const returnNumbers = function() {
+                return 1;
+                return 2; // Dead code and will never execute
+            }
+            console.log('+ Function Call +')
+            console.log(returnNumbers())
+
+            /*
+                Working with observable
+            */
+
+            const observable = new Observable(function(subscriber){
+                subscriber.next(1)
+                subscriber.next(2)
+                subscriber.next(3)
+                setTimeout(function(){
+                    subscriber.next(4)
+                },2000)
+            })
+            
+            console.log('+ Subscribe Observable +')
+            console.log('> Before subscribe')
+            observable.subscribe({
+                next : function(value) {
+                    console.log(value)
+                }
+            })
+            console.log('> After subscribe')
+		</script>	
+	</body>
+</html>

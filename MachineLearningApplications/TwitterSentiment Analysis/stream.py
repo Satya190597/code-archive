@@ -1,22 +1,8 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import re
 import Client
 import Analyzer
-
-from textblob import TextBlob
-
-
-
-		
-
-
-
-
-
-
-		
 
 if __name__ == '__main__':
 	hashTagList = ["car","supercar"]
@@ -49,14 +35,14 @@ if __name__ == '__main__':
 	#plt.show()
 
 	# Merge plot
-	#timeLikes = pd.Series(data=df['likes'].values,index=df['date'])
-	#timeLikes.plot(figsize=(16,4),label='likes',legend=True)
-	#timeLikes = pd.Series(data=df['retweets'].values,index=df['date'])
-	#timeLikes.plot(figsize=(16,4),label='retweets',legend=True)
+	timeLikes = pd.Series(data=df['likes'].values,index=df['date'])
+	timeLikes.plot(figsize=(16,4),label='likes',legend=True)
+	timeLikes = pd.Series(data=df['retweets'].values,index=df['date'])
+	timeLikes.plot(figsize=(16,4),label='retweets',legend=True)
 
-	#plt.show()
+	plt.show()
 
-	df['sentiment'] = np.array([tweetAnalyzer.analyzeSentimentByTextBlobModel(tweet) for tweet in df['Tweets']])
+	#df['sentiment'] = np.array([tweetAnalyzer.analyzeSentimentByTextBlobModel(tweet) for tweet in df['Tweets']])
 
-	print(df.head(10))
+	#print(df.head(10))
 

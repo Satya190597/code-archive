@@ -37,5 +37,4 @@ class TweetAnalyzer:
         dataFrame['source'] = np.array([tweet.source for tweet in tweets])
         dataFrame['likes'] = np.array([tweet.favorite_count for tweet in tweets])
         dataFrame['retweets'] = np.array([tweet.retweet_count for tweet in tweets])
-
         return dataFrame

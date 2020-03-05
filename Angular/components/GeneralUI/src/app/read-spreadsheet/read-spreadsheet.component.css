@@ -1,0 +1,11 @@
+table
+{
+    padding: 2px;
+    box-shadow: 2px 2px aliceblue;
+}
+table tr td 
+{
+    border: solid 2px #F8F9F9;
+    background-color: #FBFCFC;
+
+}

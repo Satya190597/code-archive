@@ -1,4 +1,19 @@
 <div>
-    <input type="file"/>
-    <button>Upload</button>
+    <input type="file" id="myFile" (change)="onUploadFile($event)"/>
+    <button (click)="onUploadFile()">Upload</button>
 </div>
+<table>
+    <tr *ngFor="let element of data;let j=index">
+        <td>
+            OPTIONS
+        </td>
+        <td *ngFor="let childElement of element;let i=index">
+            <p (click)="showCellMenu(j,i)">!</p>
+            <div style="display: none;" id="{{j}}{{i}}" >
+                <ul (click)="deleteCell(j,i)">Delete</ul>
+                <ul>Edit</ul>
+            </div>
+            {{childElement}}
+        </td>
+    </tr>
+</table>

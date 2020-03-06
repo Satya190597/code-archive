@@ -20,8 +20,6 @@ export class ReadSpreadsheetComponent implements OnInit {
     
   }
   onUploadFile(event:any) {
-
-      // const target = <DataTransfer>(event.target);
       const fileReader = new FileReader();
       fileReader.onload = (e:any) => {
       const bstr: string = e.target.result;

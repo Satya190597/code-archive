@@ -3,3 +3,5 @@ PythonWebApplications/env/*
 PythonWebApplications/tutorial/tutorial/__pycache__/*
 MachineLearningApplications/TwitterSentiment Analysis/__pycache__/*
 MachineLearningApplications/TwitterSentiment Analysis/.idea/*
+Angular/components/GeneralUI/node_modules/*
+node_modules/*

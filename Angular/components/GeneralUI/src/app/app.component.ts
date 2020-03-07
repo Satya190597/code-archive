@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <h1>Welcome</h1>
     <app-read-spreadsheet></app-read-spreadsheet>
+    <app-first-bar-chart><app-first-bar-chart>
   `,
   styles: []
 })

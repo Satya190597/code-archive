@@ -1,2 +1,11 @@
 <p>first-bar-chart works!</p>
-<canvas id="myFirstChart" width="700" height="400"></canvas>
+<div display="block"> 
+<canvas baseChart 
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOption"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas>
+</div>

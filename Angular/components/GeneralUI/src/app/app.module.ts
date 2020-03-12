@@ -6,6 +6,7 @@ import { ReadSpreadsheetComponent } from './read-spreadsheet/read-spreadsheet.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import { FirstBarChartComponent } from './first-bar-chart/first-bar-chart.component';
+import {ChartsModule} from 'ng2-charts'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FirstBarChartComponent } from './first-bar-chart/first-bar-chart.compon
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    ChartsModule
     
   ],
   providers: [],
